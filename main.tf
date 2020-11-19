@@ -67,4 +67,5 @@ resource "google_service_account_key" "lacework" {
 data "google_service_account" "selected" {
   count      = var.create ? 0 : 1
   account_id = var.service_account_name
+  project    = local.project_id
 }
