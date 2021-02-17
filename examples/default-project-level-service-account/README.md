@@ -11,7 +11,7 @@ Code inside a `main.tf` file:
 provider "google" {}
 
 module "lacework_svc_account" {
-  source  = "lacework/audit-log/gcp"
+  source  = "lacework/service-account/gcp"
   version = "~> 0.1.0"
 }
 ```

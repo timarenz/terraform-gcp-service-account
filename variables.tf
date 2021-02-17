@@ -7,6 +7,20 @@ variable "required_apis" {
   }
 }
 
+variable "for_gcr" {
+  type        = bool
+  default     = false
+  description = "If set to true, configure the service-account for GCR integration"
+}
+
+# This variable is set to true by default so that we don't break existing
+# workflows from our Cloud Account modules, gcp-config and gcp-audit-log
+variable "for_compliance" {
+  type        = bool
+  default     = true
+  description = "If set to true, configure the service-account for Compliance integration"
+}
+
 variable "org_integration" {
   type        = bool
   default     = false

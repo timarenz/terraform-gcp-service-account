@@ -12,6 +12,7 @@ TEST_CASES=(
   examples/prevent-service-account-creation
   examples/custom-organization-level-service-account
   examples/default-project-level-service-account
+  examples/for-gcr-integration
 )
 
 log() {
