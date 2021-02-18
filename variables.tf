@@ -29,7 +29,7 @@ variable "org_integration" {
 
 variable "service_account_name" {
   type        = string
-  default     = "lacework-svc-account"
+  default     = ""
   description = "The service account name"
 }
 

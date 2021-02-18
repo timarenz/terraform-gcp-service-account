@@ -3,6 +3,12 @@ locals {
   service_account_email = var.create ? (
     length(google_service_account.lacework) > 0 ? google_service_account.lacework[0].email : ""
   ) : ""
+  service_account_name = length(var.service_account_name) > 0 ? (
+    var.service_account_name ) : "lwsvc-${random_id.uniq.hex}"
+}
+
+resource "random_id" "uniq" {
+  byte_length = 4
 }
 
 data "google_project" "selected" {
@@ -20,8 +26,8 @@ resource "google_project_service" "required_apis" {
 resource "google_service_account" "lacework" {
   count        = var.create ? 1 : 0
   project      = local.project_id
-  account_id   = var.service_account_name
-  display_name = var.service_account_name
+  account_id   = local.service_account_name
+  display_name = local.service_account_name
   depends_on   = [google_project_service.required_apis]
 }
 
