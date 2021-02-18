@@ -4,10 +4,7 @@ locals {
     length(google_service_account.lacework) > 0 ? google_service_account.lacework[0].email : ""
   ) : ""
   service_account_name = length(var.service_account_name) > 0 ? (
-    var.service_account_name
-    ) : (
-    "lwsvc-${random_id.uniq.hex}"
-  )
+    var.service_account_name ) : "lwsvc-${random_id.uniq.hex}"
 }
 
 resource "random_id" "uniq" {
