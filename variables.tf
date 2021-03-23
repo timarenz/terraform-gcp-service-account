@@ -1,42 +1,13 @@
-variable "required_apis" {
-  type = map
-  default = {
-    iam             = "iam.googleapis.com"
-    serviceusage    = "serviceusage.googleapis.com"
-    resourcemanager = "cloudresourcemanager.googleapis.com"
-  }
-}
-
 variable "for_gcr" {
   type        = bool
   default     = false
   description = "If set to true, configure the service-account for GCR integration"
 }
 
-# This variable is set to true by default so that we don't break existing
-# workflows from our Cloud Account modules, gcp-config and gcp-audit-log
-variable "for_compliance" {
-  type        = bool
-  default     = true
-  description = "If set to true, configure the service-account for Compliance integration"
-}
-
-variable "org_integration" {
-  type        = bool
-  default     = false
-  description = "If set to true, configure an organization level integration"
-}
-
 variable "service_account_name" {
   type        = string
   default     = ""
   description = "The service account name"
-}
-
-variable "organization_id" {
-  type        = string
-  default     = ""
-  description = "The organization ID, required if org_integration is set to true"
 }
 
 variable "project_id" {
