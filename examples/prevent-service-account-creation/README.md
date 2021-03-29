@@ -22,7 +22,7 @@ provider "lacework" {}
 
 module "lacework_svc_account" {
   source  = "lacework/service-account/gcp"
-  version = "~> 0.1.0"
+  version = "~> 1.0"
   create  = false
 }
 ```

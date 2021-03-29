@@ -1,11 +1,12 @@
-# Create Service Account For GCR Integration
+# Create Service Account With Default Settings
 
-This example shows how to create a service account to integrate
-Google Container Registry (GCR) with Lacework.
+This example shows how to create a service account with no roles
+on a Google Cloud Platform Project to be used in conjunction with
+other Lacework GCP modules.
 
 ## Example
 
-Copy and paste the following code into a `main.tf` file:
+Code inside a `main.tf` file:
 
 ```hcl
 terraform {
@@ -18,11 +19,11 @@ terraform {
 
 provider "google" {}
 
-module "lacework_gcr_svc_account" {
-  source         = "lacework/service-account/gcp"
-  version        = "~> 0.1.3"
-  for_gcr        = true
-  for_compliance = false
+provider "lacework" {}
+
+module "lacework_svc_account" {
+  source  = "lacework/service-account/gcp"
+  version = "~> 1.0"
 }
 ```
 

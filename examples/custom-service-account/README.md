@@ -1,6 +1,8 @@
 # Create Service Account With Custom Settings
 
-This example shows how to create a service account to provide Lacework read-only access to a Google Cloud Organization and customizing the account with a few inputs.
+This example shows how to create a service account with no roles
+on a Google Cloud Platform Project to be used in conjunction with
+other Lacework GCP modules, customizing the account with a few inputs.
 
 ## Example
 
@@ -21,9 +23,7 @@ provider "lacework" {}
 
 module "lacework_svc_account" {
   source               = "lacework/service-account/gcp"
-  version              = "~> 0.1.0"
-  org_integration      = true
-  organization_id      = "my-organization-id"
+  version              = "~> 1.0"
   project_id           = "my-project"
   service_account_name = "lacework-custom-svc-account"
 }

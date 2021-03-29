@@ -4,7 +4,7 @@ output "created" {
 }
 
 output "name" {
-  value       = var.service_account_name
+  value       = local.service_account_name
   description = "The Service Account name"
 }
 

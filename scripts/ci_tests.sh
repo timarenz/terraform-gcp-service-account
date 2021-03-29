@@ -10,9 +10,8 @@ readonly project_name=terraform-gcp-service-account
 
 TEST_CASES=(
   examples/prevent-service-account-creation
-  examples/custom-organization-level-service-account
-  examples/default-project-level-service-account
-  examples/for-gcr-integration
+  examples/custom-service-account
+  examples/default-service-account
 )
 
 log() {
