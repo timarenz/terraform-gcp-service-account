@@ -16,4 +16,5 @@ output "project_id" {
 output "private_key" {
   value       = var.create ? google_service_account_key.lacework[0].private_key : ""
   description = "The private key in JSON format, base64 encoded"
+  sensitive   = true
 }
