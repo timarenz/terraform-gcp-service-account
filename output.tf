@@ -4,7 +4,8 @@ output "created" {
 }
 
 output "name" {
-  value       = local.service_account_name
+  value = length(var.service_account_name) > 0 ? (
+  var.service_account_name) : google_service_account.lacework[0].account_id
   description = "The Service Account name"
 }
 
