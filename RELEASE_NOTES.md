@@ -1,11 +1,11 @@
 # Release Notes
-Another day, another release. These are the release notes for the version `v1.0.1`.
+Another day, another release. These are the release notes for the version `v1.1.0`.
 
-## Bug Fixes
-* fix: support for sensitive values (#19) (mr-menno)([31db7af](https://github.com/lacework/terraform-gcp-service-account/commit/31db7afbaddae7f3824d48eb8e9534730e217881))
+## Features
+* feat: allow google provider version >= 3.0.0, < 5.0.0 (#25) (Darren)([056a897](https://github.com/lacework/terraform-gcp-service-account/commit/056a897ad2ff0d064fc90bd54415b72b411e4738))
+## Documentation Updates
+* docs: Add contributing documentation (#24) (Darren)([3b6115a](https://github.com/lacework/terraform-gcp-service-account/commit/3b6115abb9983aa591293695aecca044144d9d3e))
 ## Other Changes
-* chore: bump required version of TF to 0.12.31 (#21) (Scott Ford)([0ea9d73](https://github.com/lacework/terraform-gcp-service-account/commit/0ea9d73a46d74e67a208f2971ecefd3fc5c96d75))
-* ci: fix finding major versions during release (Salim Afiune Maya)([bdab647](https://github.com/lacework/terraform-gcp-service-account/commit/bdab64747b609ef856c08d7e48c5485f9df6849a))
-* ci: replace CircleCI for CodeFresh (Salim Afiune Maya)([3ee265a](https://github.com/lacework/terraform-gcp-service-account/commit/3ee265a9d508726fca7fa67c2bc573365c0950ae))
-* ci: version bump to 1.0.1-dev (Salim Afiune Maya)([5426c78](https://github.com/lacework/terraform-gcp-service-account/commit/5426c78cd6580887086d8c54e057683587866645))
-* ci: add release_contains_features() & check_for_minor_version_bump() (#17) (Ross)([00cae14](https://github.com/lacework/terraform-gcp-service-account/commit/00cae146dcf4a927d87775fd0f5582702ef07fc5))
+* chore: version bump to v1.0.2-dev (Lacework)([62ab633](https://github.com/lacework/terraform-gcp-service-account/commit/62ab6332715ac585c0491be228d37b997e4fad1c))
+* ci: ignore .terraform.lock.hcl files (#26) (Salim Afiune)([e4d3037](https://github.com/lacework/terraform-gcp-service-account/commit/e4d3037406b895031ad660cf74fc8397f3711590))
+* ci: sign lacework-releng commits (#23) (Salim Afiune)([65e8dbc](https://github.com/lacework/terraform-gcp-service-account/commit/65e8dbc395428e4af5252b5470e01d26fafaeb57))
